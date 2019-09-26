@@ -1,59 +1,18 @@
 import 'package:flutter/material.dart';
+import './tab.dart';
 
-void main() => runApp(MyApp(new List<String>.generate(1000, (i) => 'item $i')));
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final List<String> items;
-  MyApp(this.items);
-
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('Hello World'),
-        ),
-        body: new ListView.builder(
-          itemCount: items.length,
-          itemBuilder: (context, index) {
-            return new ListTile(
-              title: new Text('${items[index]}'),
-            );
-          },
-        ),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
-    );
-  }
-}
-
-class MyList extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      scrollDirection: Axis.horizontal,
-      children: <Widget>[
-        new Container(
-          width: 180,
-          color: Colors.lightBlue,
-        ),
-        new Container(
-          width: 180,
-          color: Colors.amber,
-        ),
-        new Container(
-          width: 180,
-          color: Colors.deepOrange,
-        ),
-        new Container(
-          width: 180,
-          color: Colors.deepPurpleAccent,
-        ),
-        new Container(
-          width: 180,
-          color: Colors.lightBlue,
-        ),
-      ],
+      home: TabDemo(),
     );
   }
 }

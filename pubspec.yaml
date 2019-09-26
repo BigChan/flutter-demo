@@ -1,4 +1,4 @@
-name: demo1
+name: flutter_demo
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -17,14 +17,14 @@ environment:
   sdk: '>=2.1.0 <3.0.0'
 
 dependencies:
-  dio: ^3.0.1
   flutter:
     sdk: flutter
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-
+  dio: ^3.0.1
+  url_launcher: ^5.0.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
