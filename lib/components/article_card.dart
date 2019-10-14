@@ -36,7 +36,7 @@ class ArticleItem extends StatelessWidget {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(4.0),
                         child: Image.network(
-                          '${subject["img"]}',
+                          '${subject["coverUrl"]}',
                           width: 150.0,
                           height: 100.0,
                           fit: BoxFit.fitHeight,
@@ -57,7 +57,8 @@ class ArticleItem extends StatelessWidget {
                                     style: TextStyle(color: Colors.black54),
                                   ),
                                   TextSpan(
-                                    text: '${subject["submitter"]}',
+                                    // text: '${subject["submitter"]}',
+                                    text: '推荐人',
                                     style: TextStyle(color: Colors.black54),
                                   ),
                                 ],
@@ -65,7 +66,7 @@ class ArticleItem extends StatelessWidget {
                             ),
 //                    原因
                             Text(
-                              "${subject["reason"]}",
+                              "${subject["description"]}",
                               overflow: TextOverflow.ellipsis,
                               maxLines: 4,
                               style: TextStyle(color: Colors.black54),

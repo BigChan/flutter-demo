@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './tab.dart';
+import './views/weekly_type.dart';
+import './views/article_list.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TabDemo(),
+      // home: ArticleList('a'),
+      home: WeeklyType(),
     );
   }
 }
